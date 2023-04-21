@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: discovery-server
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false                     #Set để Eureka không tự đăng ký mình là 1 client, mặc định true
+    fetch-registry: false                           #Set k lấy danh sách các client khác

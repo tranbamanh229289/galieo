@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    username: root
+    password: 2292892000
+    url: jdbc:mysql://localhost:3307/product
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761
