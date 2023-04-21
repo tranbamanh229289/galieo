@@ -10,4 +10,5 @@
 - ELK stack
 - Redis cache
 - PostgreSQL, MySQL
+- Comunication: HTTP, Message queue, gRPC
 
