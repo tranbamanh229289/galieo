@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: order-service
   datasource:
     url: jdbc:postgresql://localhost:5432/order
     username: postgres
@@ -12,12 +10,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-
-
-server:
-  port: 9002
-
-eureka:
-  client:
-    service-url:
-      default-zone: http://localhost:8761

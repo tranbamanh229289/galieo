@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: product-service
+  cloud:
+    config:
+      name: product-service
+      profile: default
+      uri: http://localhost:8000/
+
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761

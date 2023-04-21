@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: product-service
   datasource:
     username: root
     password: 2292892000
@@ -12,12 +10,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-
-
-server:
-  port: 9001
-
-eureka:
-  client:
-    service-url:
-      default-zone: http://localhost:8761
