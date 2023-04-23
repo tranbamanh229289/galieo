@@ -2,11 +2,15 @@ spring:
   datasource:
     username: root
     password: 2292892000
-    url: jdbc:mysql://localhost:3307/product
+    url: jdbc:mysql://localhost:3307/auth
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      dd-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+jwt_secret_key: 3273357638792F423F4528482B4D6251655468576D5A7134743677397A244326
+jwt_expire_time: 604800000
+

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: auth-service
+  cloud:
+    name: auth-service
+    profile: default
+    uri: http://localhost:8000
+
+server:
+  port: 9003
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761

@@ -1,12 +1,18 @@
 spring:
   application:
     name: config-server
-  profiles:
-    active: native
   cloud:
-    config.server:
-      native:
-        search-locations: classpath:/config
+    config:
+      server:
+        git:
+          uri: https://github.com/tranbamanh229289/galieo.git
+          search-paths: configstore
+          default-label: master
 
 server:
   port: 8000
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761
