@@ -19,7 +19,7 @@ public class JwtService {
 
     private final Long EXPIRE_TIME;
 
-    JwtService(@Value("${jwt-secret_key}") String secretKey, @Value("${expire_time}") String expireTime) {
+    JwtService(@Value("${jwt_secret_key}") String secretKey, @Value("${jwt_expire_time}") String expireTime) {
         SECRET_KEY = secretKey;
         EXPIRE_TIME = Long.valueOf(expireTime);
     }

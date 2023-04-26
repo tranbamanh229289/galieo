@@ -14,3 +14,8 @@ spring:
 jwt_secret_key: 3273357638792F423F4528482B4D6251655468576D5A7134743677397A244326
 jwt_expire_time: 604800000
 
+cors:
+  pattern: api/v1/**
+  methods: "*"
+  origins: localhost:3000
+

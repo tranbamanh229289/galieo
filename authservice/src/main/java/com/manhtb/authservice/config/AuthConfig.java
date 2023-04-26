@@ -12,10 +12,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
-@RequiredArgsConstructor
 public class AuthConfig {
     @Autowired
-    private final IUserRepository userRepository;
+    private IUserRepository userRepository;
 
     @Bean
     public UserDetailsService userDetailsService() {

@@ -1,5 +1,8 @@
 package com.manhtb.authservice.dto.response;
 
+import lombok.Builder;
+
+@Builder
 public class BaseResponse <T> {
     private String message;
     private Integer code;
