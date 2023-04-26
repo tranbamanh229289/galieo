@@ -1,8 +1,8 @@
 package com.manhtb.productservice.service.impl;
 
 import com.manhtb.productservice.entity.Book;
-import com.manhtb.productservice.model.request.BookRequest;
-import com.manhtb.productservice.model.response.BookResponse;
+import com.manhtb.productservice.dto.request.BookRequest;
+import com.manhtb.productservice.dto.response.BookResponse;
 import com.manhtb.productservice.repository.IBookRepository;
 import com.manhtb.productservice.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;

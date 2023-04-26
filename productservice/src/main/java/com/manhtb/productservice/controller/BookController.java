@@ -1,10 +1,9 @@
 package com.manhtb.productservice.controller;
 
-import com.manhtb.productservice.model.request.BookRequest;
-import com.manhtb.productservice.model.response.BookResponse;
+import com.manhtb.productservice.dto.request.BookRequest;
+import com.manhtb.productservice.dto.response.BookResponse;
 import com.manhtb.productservice.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

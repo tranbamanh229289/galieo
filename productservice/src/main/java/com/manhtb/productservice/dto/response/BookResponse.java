@@ -1,12 +1,16 @@
-package com.manhtb.productservice.model.request;
+package com.manhtb.productservice.dto.response;
 
 import com.manhtb.productservice.enumerate.BookType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookRequest {
+@Builder
+public class BookResponse {
+
+    private Long id;
     private String name;
 
     private String author;
@@ -16,6 +20,14 @@ public class BookRequest {
     private Double price;
 
     private BookType bookType;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

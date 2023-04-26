@@ -1,7 +1,7 @@
 package com.manhtb.productservice.service;
 
-import com.manhtb.productservice.model.request.BookRequest;
-import com.manhtb.productservice.model.response.BookResponse;
+import com.manhtb.productservice.dto.request.BookRequest;
+import com.manhtb.productservice.dto.response.BookResponse;
 
 import java.util.List;
 
