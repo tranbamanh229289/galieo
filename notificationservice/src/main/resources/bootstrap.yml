@@ -1,8 +1,14 @@
 spring:
   application:
     name: notification-service
+  cloud:
+    config:
+      name: notification-service
+      profile: default
+      uri: http://localhost:8000
+
 server:
-  port: 9001
+  port: 9004
 
 eureka:
   client:
