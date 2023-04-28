@@ -31,17 +31,4 @@ public class KafkaConfig {
     public NewTopic topic() {
         return TopicBuilder.name(topicName).build();
     }
-//    @Bean
-//    public ProducerFactory<String, Object> producerFactory() {
-//        Map<String, Object> props = new HashMap<>();
-//        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-//        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer);
-//        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer);
-//        return new DefaultKafkaProducerFactory<>(props);
-//    }
-//
-//    @Bean
-//    public KafkaTemplate<String, Object> kafkaTemplate(ProducerFactory<String, Object> producerFactory) {
-//        return new KafkaTemplate<>(producerFactory);
-//    }
 }
