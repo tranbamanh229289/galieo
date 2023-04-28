@@ -15,7 +15,7 @@ public class NotificationConsumerService {
             groupId = "${spring.kafka.consumer.group-id}"
     )
     public void consumer(OrderEvent event) {
-        logger.info(String.format(event.toString()));
+        logger.info(String.format("event => %s",event.toString()));
 
     }
 }
