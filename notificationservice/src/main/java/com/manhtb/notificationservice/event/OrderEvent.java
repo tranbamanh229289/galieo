@@ -1,11 +1,11 @@
-package com.manhtb.orderservice.event;
+package com.manhtb.notificationservice.event;
 
-import com.manhtb.orderservice.dto.OrderDto;
+import com.manhtb.notificationservice.dto.OrderDto;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class OrderEvent {
     private String message;
     private String status;

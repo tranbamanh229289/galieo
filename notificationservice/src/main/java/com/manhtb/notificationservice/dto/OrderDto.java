@@ -1,4 +1,4 @@
-package com.manhtb.orderservice.dto;
+package com.manhtb.notificationservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
