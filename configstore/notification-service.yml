@@ -3,6 +3,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/notification
     username: postgres
     password: 2292892000
+    driverClassName: org.postgresql.Driver
+
   jpa:
     show-sql: true
     hibernate:
