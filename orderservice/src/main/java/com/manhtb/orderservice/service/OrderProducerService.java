@@ -2,6 +2,8 @@ package com.manhtb.orderservice.service;
 
 import com.manhtb.orderservice.event.OrderEvent;
 import org.apache.kafka.clients.admin.NewTopic;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
@@ -17,7 +19,10 @@ public class OrderProducerService {
     @Autowired
     private NewTopic topic;
 
+    Logger logger = LoggerFactory.getLogger(OrderProducerService.class);
+
     public void sendMessage(OrderEvent orderEvent) {
+        logger.info(String.format("order event => %s", orderEvent.toString()));
         Message<OrderEvent> message = MessageBuilder
                 .withPayload(orderEvent)
                 .setHeader(KafkaHeaders.TOPIC, topic.name())

@@ -27,28 +27,21 @@ public class KafkaConfig {
     @Value("${spring.kafka.producer.value-serializer}")
     private String valueSerializer;
 
-
+    @Bean
     public NewTopic topic() {
         return TopicBuilder.name(topicName).build();
     }
-
-    @Bean
-    public Map<String, Object> producerConfig() {
-        Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer);
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer);
-
-        return props;
-    }
-
-    @Bean
-    public ProducerFactory<String, Object> producerFactory() {
-        return new DefaultKafkaProducerFactory<>(producerConfig());
-    }
-
-    @Bean
-    public KafkaTemplate<String, Object> kafkaTemplate() {
-        return new KafkaTemplate<>(producerFactory());
-    }
+//    @Bean
+//    public ProducerFactory<String, Object> producerFactory() {
+//        Map<String, Object> props = new HashMap<>();
+//        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+//        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer);
+//        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer);
+//        return new DefaultKafkaProducerFactory<>(props);
+//    }
+//
+//    @Bean
+//    public KafkaTemplate<String, Object> kafkaTemplate(ProducerFactory<String, Object> producerFactory) {
+//        return new KafkaTemplate<>(producerFactory);
+//    }
 }
