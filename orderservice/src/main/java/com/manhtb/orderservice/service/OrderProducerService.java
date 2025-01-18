@@ -22,7 +22,6 @@ public class OrderProducerService {
     Logger logger = LoggerFactory.getLogger(OrderProducerService.class);
 
     public void sendMessage(OrderEvent orderEvent) {
-        logger.info(String.format("order event => %s", orderEvent.toString()));
         Message<OrderEvent> message = MessageBuilder
                 .withPayload(orderEvent)
                 .setHeader(KafkaHeaders.TOPIC, topic.name())
